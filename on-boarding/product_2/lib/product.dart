@@ -3,7 +3,11 @@ class Product {
   String description;
   double price;
 
-  Product(this.name, this.description, this.price);
+  Product(
+    this.name, 
+    this.description, 
+    this.price
+    );
 
   @override
   String toString() {
