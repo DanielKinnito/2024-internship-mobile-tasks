@@ -1,16 +1,16 @@
 # product_2
 
-A new Flutter project.
+Create a simple command-line eCommerce application using Dart. This application will allow users to add, view, edit, and delete products. Products should have a name, description, and price.  The application should use OOP principles to organize the code and manage the product data.
 
-## Getting Started
+## Requirements
+Product Class: Create a class representing a product with the following properties:
+- Name :heavy_check_mark:
+- Description :heavy_check_mark:
+- Price :heavy_check_mark:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Product Manager Class: Create a class that manages products and includes the following methods:
+- Add a new product :heavy_check_mark:
+- View all products :heavy_check_mark:
+- View a single product :heavy_check_mark:
+- Edit a product (update name, description, price) :heavy_check_mark:
+- Delete a product :heavy_check_mark:
