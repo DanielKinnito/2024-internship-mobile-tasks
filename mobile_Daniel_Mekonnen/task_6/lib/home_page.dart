@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ElevatedButton(
               // ElevatedButton for the list icon button possibly Menu
@@ -24,43 +24,48 @@ class HomePage extends StatelessWidget {
               onPressed: () {},
               child: const Icon(Icons.list),
             ),
-            Column(
-              // Column for the title and subtitle
-              children: [
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: const Text(
-                    'July 2021',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'syne',
+            Container(
+              margin: const EdgeInsets.only(
+                top: 5,
+                left: 5,
+              ),
+              child: Column(
+                // Column for the title and subtitle
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    alignment: Alignment.centerLeft,
+                    child: const Text(
+                      'July 2021',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'syne',
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: const Text(
-                    'Hello, Daniel',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontFamily: 'sora',
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: const Text(
+                      'Hello, Daniel',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontFamily: 'sora',
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            // const SizedBox(
-            //   width: 140,
-            //   height: 50,
-            // ),
-
+            const SizedBox(
+              width: 50,
+            ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black,
-                backgroundColor: Colors.grey,
-                shadowColor: Colors.greenAccent,
+                backgroundColor: Colors.white,
+                // shadowColor: Colors.grey,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(11.0)),
@@ -75,25 +80,56 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Available Products',
-                  textAlign: TextAlign.left,
-                ),
-                ElevatedButton(
-                  style: const ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll<Color>(Colors.grey),
+            Container(
+              margin: const EdgeInsets.only(
+                top: 10,
+                left: 10,
+                right: 10,
+                bottom: 10,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        'Available Products',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontFamily: 'poppins',
+                        ),
+                      ),
+                    ),
+                  
+                  
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      alignment: Alignment.centerRight,
+                      foregroundColor: Colors.black,
+                      backgroundColor: Colors.white,
+                      shadowColor: Colors.grey,
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(11.0)),
+                      minimumSize: const Size(40, 40),
+                    ),
+                    onPressed: () {},
+                    child: const Icon(Icons.search),
                   ),
-                  onPressed: () {},
-                  child: const Icon(Icons.search),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               height: 240,
               width: 366,
+              margin: const EdgeInsets.only(
+                top: 5,
+                left: 10,
+                right: 10,
+                bottom: 5,
+              ),
+              padding: const EdgeInsets.all(0),
               color: Colors.grey,
               child: Column(
                 children: [
@@ -105,8 +141,17 @@ class HomePage extends StatelessWidget {
                   ),
                   const Row(
                     children: [
-                      Text('Derby Shoes'),
-                      Text('\$120'),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: const Text(
+                          'Available Products',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontFamily: 'poppins',
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   const Row(
@@ -119,90 +164,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              height: 240,
-              width: 366,
-              color: Colors.grey,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Image.asset(
-                      'images/leather_shoe_1.jpg',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  const Row(
-                    children: [
-                      Text('Derby Shoes'),
-                      Text('\$120'),
-                    ],
-                  ),
-                  const Row(
-                    children: [
-                      Text('Men\'s  Shoes'),
-                      Icon(Icons.star),
-                      Text('(4.0)'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 240,
-              width: 366,
-              color: Colors.grey,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Image.asset(
-                      'images/leather_shoe_1.jpg',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  const Row(
-                    children: [
-                      Text('Derby Shoes'),
-                      Text('\$120'),
-                    ],
-                  ),
-                  const Row(
-                    children: [
-                      Text('Men\'s  Shoes'),
-                      Icon(Icons.star),
-                      Text('(4.0)'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: 240,
-              width: 366,
-              color: Colors.grey,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Image.asset(
-                      'images/leather_shoe_1.jpg',
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  const Row(
-                    children: [
-                      Text('Derby Shoes'),
-                      Text('\$120'),
-                    ],
-                  ),
-                  const Row(
-                    children: [
-                      Text('Men\'s  Shoes'),
-                      Icon(Icons.star),
-                      Text('(4.0)'),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            
           ],
         ),
       ),
