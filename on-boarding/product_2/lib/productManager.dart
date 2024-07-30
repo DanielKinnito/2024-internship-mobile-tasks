@@ -9,7 +9,7 @@ class ProductList {
   }
 
   void viewAll(){
-    if (products.length == 0){
+    if (products.isEmpty){
       print('There are no products in the list');
     }
     else{
