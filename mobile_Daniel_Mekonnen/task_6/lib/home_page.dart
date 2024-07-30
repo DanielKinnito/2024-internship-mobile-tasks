@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
             //   width: 140,
             //   height: 50,
             // ),
-            
+
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.black,
@@ -97,7 +97,12 @@ class HomePage extends StatelessWidget {
               color: Colors.grey,
               child: Column(
                 children: [
-                  Image.asset('images/item1.jpg'),
+                  Expanded(
+                    child: Image.asset(
+                      'images/leather_shoe_1.jpg',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const Row(
                     children: [
                       Text('Derby Shoes'),
@@ -120,7 +125,12 @@ class HomePage extends StatelessWidget {
               color: Colors.grey,
               child: Column(
                 children: [
-                  Image.asset('images/item1.jpg'),
+                  Expanded(
+                    child: Image.asset(
+                      'images/leather_shoe_1.jpg',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const Row(
                     children: [
                       Text('Derby Shoes'),
@@ -143,7 +153,12 @@ class HomePage extends StatelessWidget {
               color: Colors.grey,
               child: Column(
                 children: [
-                  Image.asset('images/item1.jpg'),
+                  Expanded(
+                    child: Image.asset(
+                      'images/leather_shoe_1.jpg',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const Row(
                     children: [
                       Text('Derby Shoes'),
@@ -166,7 +181,12 @@ class HomePage extends StatelessWidget {
               color: Colors.grey,
               child: Column(
                 children: [
-                  Image.asset('images/item1.jpg'),
+                  Expanded(
+                    child: Image.asset(
+                      'images/leather_shoe_1.jpg',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const Row(
                     children: [
                       Text('Derby Shoes'),
