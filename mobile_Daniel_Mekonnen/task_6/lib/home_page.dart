@@ -158,20 +158,20 @@ class HomePage extends StatelessWidget {
               // Product List
               // Container for the first product
               Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(8.0),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 5.0,
-                    ),
-                  ],
-                ),
+                // decoration: BoxDecoration(
+                //   color: Colors.white,
+                //   border: Border.all(
+                //     color: Colors.grey,
+                //     width: 1,
+                //   ),
+                //   borderRadius: BorderRadius.circular(8.0),
+                //   boxShadow: const [
+                //     BoxShadow(
+                //       color: Colors.grey,
+                //       blurRadius: 5.0,
+                //     ),
+                //   ],
+                // ),
                 height: 240,
                 width: 366,
                 margin: const EdgeInsets.only(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_6/home_page.dart';
+import 'package:task_6/details_page.dart';
+// import 'package:task_6/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class _RootPageStateState extends State<RootPageState> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:  HomePage(),      
+      body:  DetailsPage(),      
     );
   }
 }

@@ -15,59 +15,237 @@ class DetailsPage extends StatelessWidget {
           },
         ),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        margin: const EdgeInsets.only(
-          top: 0, 
-          left: 0, 
-          right: 0, 
-          bottom: 0,
-          ),
+      body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              margin: const EdgeInsets.only(
-                top: 0, 
-                left: 0, 
-                right: 0, 
-                bottom: 0,
+            Column(
+              children: [
+                Image.asset(
+                  'images/leather_shoe_1.jpg',
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.contain,
                 ),
-              child: Image.asset(
-                'assets/images/leather_shoe_1.jpg',
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
-              ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Men\'s Shoe',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Container(
+                      alignment: Alignment.centerRight,
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            color: Colors.yellow,
+                          ),
+                          Text(
+                            '(`4.5`)',
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Derby Shoe',
+                      style: GoogleFonts.poppins(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Text(
+                      '\$100',
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.right,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Size: ',
+                      style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '39',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '40',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '41',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '42',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '43',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 60,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            '44',
+                            style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 366,
+                  height: 260,
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: Colors.white,
+                  ),
+                  child: Text(
+                    'Your large text goes here',
+                    style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
             ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 0, 
-                left: 0, 
-                right: 0, 
-                bottom: 0,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  width: 152,
+                  height: 50,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.red, // Text color
+                      side: const BorderSide(color: Colors.red), // Border color
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'DELETE',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ),
-              child: Text(
-                'Food',
-                style: GoogleFonts.poppins(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+                SizedBox(
+                  width: 152,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:  Colors.blue,
+                      foregroundColor: Colors.white,
+                      elevation: 0.5,
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'UPDATE',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 0, 
-                left: 0, 
-                right: 0, 
-                bottom: 0,
-                ),
-              child: Text(
-                'This is a food item',
-                style: GoogleFonts.poppins(
-                  fontSize: 20,
-                  fontWeight: FontWeight.normal,
-                ),
-              ),
+              ],
             ),
           ],
         ),
