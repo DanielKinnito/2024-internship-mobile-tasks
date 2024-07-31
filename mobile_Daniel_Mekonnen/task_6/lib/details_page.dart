@@ -21,6 +21,7 @@ class DetailsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'images/leather_shoe_1.jpg',
@@ -48,7 +49,7 @@ class DetailsPage extends StatelessWidget {
                             color: Colors.yellow,
                           ),
                           Text(
-                            '(`4.5`)',
+                            '(4.5)',
                             style: GoogleFonts.poppins(
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
