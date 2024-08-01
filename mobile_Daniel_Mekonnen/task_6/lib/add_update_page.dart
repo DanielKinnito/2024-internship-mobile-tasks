@@ -359,7 +359,7 @@ class AddUpdatePage extends StatelessWidget {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor:const Color.fromRGBO(63, 81, 243, 1),
                           foregroundColor: Colors.white,
                           elevation: 0.5,
                           shape: RoundedRectangleBorder(
