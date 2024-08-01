@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:task_6/details_page.dart';
-// import 'package:task_6/home_page.dart';
+import 'package:task_6/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+// import 'package:myapp/details_page.dart';
+// import 'package:myapp/add_update_page.dart';
+// import 'package:myapp/search_page.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const RootPageState(),
     );
@@ -32,7 +38,7 @@ class _RootPageStateState extends State<RootPageState> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:  DetailsPage(),      
+      body: HomePage(),
     );
   }
 }

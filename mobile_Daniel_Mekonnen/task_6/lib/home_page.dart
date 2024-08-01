@@ -1,5 +1,10 @@
+// import 'package:google_fonts/google_fonts.dart';// import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:task_6/add_update_page.dart';
+import 'package:task_6/details_page.dart';
+import 'package:task_6/search_page.dart';
+// import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,275 +13,665 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          // IconButton for the menu icon button
-          icon: const Icon(Icons.menu),
-          onPressed: () {},
+        leading: Padding(
+          padding: const EdgeInsets.only(
+            left: 16.0,
+          ),
+          child: IconButton(
+            style: const ButtonStyle(
+              shape: WidgetStatePropertyAll(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                ),
+              ),
+              backgroundColor: WidgetStatePropertyAll(Color.fromRGBO(255, 255, 255, 1)),
+            ),
+            onPressed: () {},
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.grey,
+            ),
+          ),
         ),
-        title: Container(
-          margin: const EdgeInsets.only(
-            top: 5,
-            left: 5,
-          ),
-          child: Column(
-            // Column for the title and subtitle
-            children: [
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                ),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'July 2021',
-                  style: GoogleFonts.syne(
-                    color: Colors.grey,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
+        // centerTitle: true,
+        title: const Column(
+          children: [
+            Text(
+              'July, 2024',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Colors.grey,
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Hello, Daniel',
-                  style: GoogleFonts.sora(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
+              textAlign: TextAlign.start,
+            ),
+            Text(
+              'Hello, Daniel',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         actions: [
-          Container(
-            width: 40,
-            height: 40,
-            padding: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.grey,
-                width: 1,
-              ),
-              borderRadius: BorderRadius.circular(8.0),
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 16.0,
             ),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 1,
+            child: IconButton(
+              style: const ButtonStyle(
+                shape: WidgetStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                  ),
                 ),
-                borderRadius: BorderRadius.circular(8.0),
+                backgroundColor: WidgetStatePropertyAll(Colors.white),
               ),
-              padding: const EdgeInsets.all(10),
-              child: IconButton(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(50),
-                onPressed: () {},
-                icon: const Icon(Icons.notifications),
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications_outlined,
+                color: Colors.grey,
               ),
             ),
           ),
         ],
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(
+          left: 16.0,
+        ),
+        child: IconButton(
+          style: const ButtonStyle(
+            shape: WidgetStatePropertyAll(
+              CircleBorder(
+                eccentricity: BorderSide.strokeAlignCenter,
+              ),
+            ),
+            backgroundColor: WidgetStatePropertyAll(Color.fromRGBO(63, 81, 243, 1),),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const AddUpdatePage()),
+            );
+          },
+          icon: const Icon(
+            Icons.add,
+            color: Color.fromRGBO(255, 255, 255, 1),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.only(
-            top: 10,
-            left: 10,
-            right: 10,
-            bottom: 10,
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 16.0,
+            right: 16.0,
+            top: 8.0,
+            bottom: 8.0,
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 10,
-                  left: 10,
-                  right: 10,
-                  bottom: 10,
+              Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 5,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(top: 10),
-                      alignment: Alignment.centerLeft,
+                    const Padding(
+                      padding: EdgeInsets.only(
+                        left: 5,
+                      ),
                       child: Text(
-                        'Available Products',
-                        style: GoogleFonts.poppins(
-                          color: Colors.black,
+                        'Avaiable Products',
+                        style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
+                          color: Colors.black,
                         ),
                       ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(8.0),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        right: 0.0,
                       ),
-                      child: Container(
-                        width: 40,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(
-                            color: Colors.grey,
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        child: IconButton(
-                          alignment: Alignment.centerRight,
-                          onPressed: () {},
-                          icon: const Icon(Icons.search),
-                          style: IconButton.styleFrom(
-                            foregroundColor: Colors.grey,
-                            backgroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
+                      child: IconButton(
+                        style: const ButtonStyle(
+                          shape: WidgetStatePropertyAll(
+                            RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8.0)),
                             ),
                           ),
+                          backgroundColor: WidgetStatePropertyAll(Colors.white),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SearchPage()),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.search_rounded,
+                          color: Colors.grey,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-              // Product List
-              // Container for the first product
-              Container(
-                // decoration: BoxDecoration(
-                //   color: Colors.white,
-                //   border: Border.all(
-                //     color: Colors.grey,
-                //     width: 1,
-                //   ),
-                //   borderRadius: BorderRadius.circular(8.0),
-                //   boxShadow: const [
-                //     BoxShadow(
-                //       color: Colors.grey,
-                //       blurRadius: 5.0,
-                //     ),
-                //   ],
-                // ),
-                height: 240,
-                width: 366,
-                margin: const EdgeInsets.only(
-                  top: 5,
-                  left: 5,
-                  right: 5,
-                  bottom: 5,
-                ),
-                padding: const EdgeInsets.all(10),
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Image.asset(
-                        'images/leather_shoe_1.jpg',
-                        fit: BoxFit.fitWidth,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DetailsPage()),
+                  );
+                },
+                child: const Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                      bottomLeft: Radius.circular(16.0),
+                      bottomRight: Radius.circular(16.0),
+                    ),
+                    side: BorderSide(
+                      color: Colors.grey,
+                      width: 0.0,
+                    ),
+                  ),
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
+                        ),
+                        child: SizedBox(
+                          width: 366,
+                          height: 160,
+                          child: Image(
+                            image: AssetImage(
+                              'images/leather_shoe_1.jpg',
+                            ),
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(
-                            top: 5,
-                            bottom: 5,
-                          ),
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Derby Leather Shoes',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(
-                            top: 5,
-                            bottom: 5,
-                          ),
-                          child: Text(
-                            '\$ 150',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(
-                            top: 5,
-                            bottom: 5,
-                          ),
-                          child: Text(
-                            'Men\'s Derby Leather Shoes',
-                            style: GoogleFonts.poppins(
-                              color: Colors.grey,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(
-                            top: 5,
-                            bottom: 5,
-                          ),
-                          child: Row(
-                            children: [
-                              const Icon(Icons.star,
-                                  color: Colors.yellow, size: 20),
-                              Text(
-                                '(4.0)',
-                                style: GoogleFonts.poppins(
-                                  color: Colors.grey,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w400,
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Derby Leather Shoe',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Text(
+                                    '\$150',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Men\'s Shoe',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(
+                                        '(4.5)',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey,
+                                        ),
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DetailsPage()),
+                  );
+                },
+                child: const Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                      bottomLeft: Radius.circular(16.0),
+                      bottomRight: Radius.circular(16.0),
+                    ),
+                    side: BorderSide(
+                      color: Colors.grey,
+                      width: 0.0,
+                    ),
+                  ),
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
+                        ),
+                        child: SizedBox(
+                          width: 366,
+                          height: 160,
+                          child: Image(
+                            image: AssetImage(
+                              'images/leather_shoe_1.jpg',
+                            ),
+                            fit: BoxFit.fitWidth,
                           ),
                         ),
-                      ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Derby Leather Shoe',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Text(
+                                    '\$150',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Men\'s Shoe',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(
+                                        '(4.5)',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey,
+                                        ),
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DetailsPage()),
+                  );
+                },
+                child: const Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                      bottomLeft: Radius.circular(16.0),
+                      bottomRight: Radius.circular(16.0),
                     ),
-                  ],
+                    side: BorderSide(
+                      color: Colors.grey,
+                      width: 0.0,
+                    ),
+                  ),
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
+                        ),
+                        child: SizedBox(
+                          width: 366,
+                          height: 160,
+                          child: Image(
+                            image: AssetImage(
+                              'images/leather_shoe_1.jpg',
+                            ),
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Derby Leather Shoe',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Text(
+                                    '\$150',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Men\'s Shoe',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(
+                                        '(4.5)',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey,
+                                        ),
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DetailsPage()),
+                  );
+                },
+                child: const Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(16.0),
+                      topRight: Radius.circular(16.0),
+                      bottomLeft: Radius.circular(16.0),
+                      bottomRight: Radius.circular(16.0),
+                    ),
+                    side: BorderSide(
+                      color: Colors.grey,
+                      width: 0.0,
+                    ),
+                  ),
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
+                        ),
+                        child: SizedBox(
+                          width: 366,
+                          height: 160,
+                          child: Image(
+                            image: AssetImage(
+                              'images/leather_shoe_1.jpg',
+                            ),
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Derby Leather Shoe',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Text(
+                                    '\$150',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 5,
+                                  ),
+                                  child: Text(
+                                    'Men\'s Shoe',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey,
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    right: 5,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.yellow,
+                                      ),
+                                      Text(
+                                        '(4.5)',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.grey,
+                                        ),
+                                        textAlign: TextAlign.right,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue,
-        onPressed: () {
-          debugPrint('Add Button from HomePage is clicked');
-        },
-        shape: const CircleBorder(),
-        child: const Icon(Icons.add),
       ),
     );
   }
