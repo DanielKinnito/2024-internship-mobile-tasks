@@ -17,7 +17,7 @@
 ## Screenshots
 
 ### Home Page
-- ![image](https://github.com/user-attachments/assets/c9589aa4-ab03-4abf-923e-72e91895f7ed)
+- ![image](https://github.com/user-attachments/assets/4c902287-db27-4b37-b043-41a2f1804ace)
 
 ## Details Page
 - ![image](https://github.com/user-attachments/assets/c712be2c-2fb7-46d8-9900-538f04089b06)
