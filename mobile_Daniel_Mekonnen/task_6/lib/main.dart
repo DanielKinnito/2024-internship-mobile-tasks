@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:task_6/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:myapp/details_page.dart';
-// import 'package:myapp/add_update_page.dart';
-// import 'package:myapp/search_page.dart';
+
+import 'add_update_page.dart';
+import 'custom_page_route.dart';
+import 'details_page.dart';
+import 'search_page.dart';
+import 'home_page.dart';
 
 
 void main() {
@@ -12,7 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,6 +24,18 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const RootPageState(),
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case 'Add/Update':
+            return SlidePageRoute(page: const AddUpdatePage());
+          case 'Details':
+            return ScalePageRoute(page: const DetailsPage());
+          case 'Search':
+            return SlidePageRoute(page: const SearchPage());
+          default:
+            return null;
+        }
+      },
     );
   }
 }

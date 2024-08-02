@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_6/details_page.dart';
+import 'details_page.dart';
 
 // import 'package:flutter/widgets.dart';
 
@@ -142,11 +142,7 @@ class _SearchPageState extends State<SearchPage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DetailsPage()),
-                  );
+                  Navigator.pushNamed(context, 'Details');
                 },
                 child: const Card(
                   shape: RoundedRectangleBorder(
@@ -269,11 +265,7 @@ class _SearchPageState extends State<SearchPage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DetailsPage()),
-                  );
+                  Navigator.pushNamed(context, 'Details');
                 },
                 child: const Card(
                   shape: RoundedRectangleBorder(
@@ -396,11 +388,7 @@ class _SearchPageState extends State<SearchPage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DetailsPage()),
-                  );
+                  Navigator.pushNamed(context, 'Details');
                 },
                 child: const Card(
                   shape: RoundedRectangleBorder(
