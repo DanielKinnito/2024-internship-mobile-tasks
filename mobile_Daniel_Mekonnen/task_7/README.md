@@ -1,11 +1,11 @@
 # Task 7: Implementing Navigation and Routing in a ecommerce Mobile App
 You have been tasked with building a simple ecommerce mobile app using Flutter. The app should allow users to create, view, update and delete products. As part of this project, you are required to implement navigation and routing features to ensure a seamless user experience.
 ## 1. Screen Navigation: (3 points)
-    The app should have the following screens:
-      - A home screen that displays a list of all the products.
-      - A screen to add/edit a new product.
-      - A screen to view an existing product when selected from the list.
-      - Implement navigation between these screens using Flutter's built-in navigation methods.
+The app should have the following screens:
+  - A home screen that displays a list of all the products.
+  - A screen to add/edit a new product.
+  - A screen to view an existing product when selected from the list.
+  - Implement navigation between these screens using Flutter's built-in navigation methods.
 ## 2. Named Routes: (1 point)
 - Define named routes for each screen in the app. Utilize named routes to navigate between screens rather than using anonymous routes.
 ## 3. Passing Data Between Screens: (3 points)
